@@ -11,6 +11,16 @@ package MultidimensionalArray;
  */
 public class MultidimensionalArray {
      public static void main(String[] args) {
-    
+              String[][] program = {
+            {"***", "**", "***"},
+            {"*", "****", "*****"},
+            {"**", "***", "****"}
+        };
+             
+        for (int i = 0; i < program.length; i++) { 
+            for (int j = 0; j < program[i].length; j++) { 
+                System.out.print(program[i][j] + " ");
+            }
+     }
      }
 }
