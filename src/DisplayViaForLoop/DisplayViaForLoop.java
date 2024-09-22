@@ -22,6 +22,7 @@ public class DisplayViaForLoop {
             for (int j = 0; j < Asterisk[i].length; j++) {
                 System.out.print(Asterisk[i][j] + " "); 
             }
+            System.out.println();
         }
 }
 }
