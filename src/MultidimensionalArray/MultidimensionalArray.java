@@ -16,12 +16,12 @@ public class MultidimensionalArray {
             {"*", "****", "*****"},
             {"**", "***", "****"}
         };
-             
+          // Display the elements using nested for loops
         for (int i = 0; i < program.length; i++) { 
             for (int j = 0; j < program[i].length; j++) { 
-                System.out.print(program[i][j] + " ");
+                System.out.print(program[i][j] + " ");// Print each element
             }
-            System.out.println();
+            System.out.println();  // New line after each row
      }
      }
 }

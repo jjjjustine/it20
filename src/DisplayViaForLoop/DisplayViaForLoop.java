@@ -11,18 +11,13 @@ package DisplayViaForLoop;
  */
 public class DisplayViaForLoop {
      public static void main(String[] args) {
-     String[][] Asterisk = {
-            {"***", "**", "***"},
-            {"*", "****", "*****"},
-            {"**", "***", "****"}
-        };
+       String[] Asterisk = {"***", "**", "***"};
 
+        
         System.out.println("Asterisks:");
-        for (int i = 0; i < Asterisk.length; i++) { 
-            for (int j = 0; j < Asterisk[i].length; j++) {
-                System.out.print(Asterisk[i][j] + " "); 
-            }
-            System.out.println();
+        for (int i = 0; i < Asterisk.length; i++) {
+             // print asterisks
+            System.out.println(Asterisk[i]);
         }
 }
 }
