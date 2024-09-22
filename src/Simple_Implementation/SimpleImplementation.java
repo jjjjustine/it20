@@ -14,5 +14,7 @@ public class SimpleImplementation {
        
        String [] asterisk = {"***", "**", "***"};
         System.out.println(asterisk[0]);
+        System.out.println(asterisk[1]);
+        System.out.println(asterisk[2]);
     }
 }
