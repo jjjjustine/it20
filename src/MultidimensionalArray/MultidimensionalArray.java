@@ -21,6 +21,7 @@ public class MultidimensionalArray {
             for (int j = 0; j < program[i].length; j++) { 
                 System.out.print(program[i][j] + " ");
             }
+            System.out.println();
      }
      }
 }
