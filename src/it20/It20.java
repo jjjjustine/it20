@@ -17,6 +17,7 @@ public class It20 {
     public static void main(String[] args) {
         String [] program = {"Information Technology", "BUSINESS ADMINISTRATION", "TEACHER EDUCATION PROGRAM"};
         System.out.println(program[0]);
+        System.out.println(program[1]);
     }
     
 }
