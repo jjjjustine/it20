@@ -18,6 +18,7 @@ public class It20 {
         String [] program = {"Information Technology", "BUSINESS ADMINISTRATION", "TEACHER EDUCATION PROGRAM"};
         System.out.println(program[0]);
         System.out.println(program[1]);
+        System.out.println(program[2]);
     }
     
 }
