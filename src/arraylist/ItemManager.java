@@ -25,5 +25,14 @@ public class ItemManager {
         items.add(item);
         System.out.println("You Inserted: " + items);
     }
+       //this will update the items
+    public void updateItem(int index, String newItem) {
+        if(index >= 0 && index < items.size()) {
+            String oldItem = items.set(index, newItem);
+            System.out.println("You updated: " + oldItem + " to " + newItem);
+        } else {
+            System.out.println("Index out of bounds");
+        }
+    }
     }
 

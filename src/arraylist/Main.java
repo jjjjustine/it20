@@ -26,5 +26,16 @@ public class Main {
         //mabutang diri ang gi add nga name
         list.addItems(item);
           System.out.println(".........................");
+          
+           System.out.println("Enter an index number that you want to change: ");
+        index = sc.nextInt(); 
+        
+        sc.nextLine();
+        
+        System.out.println("Enter a new name that you want to change on that index number: ");
+        newItem = sc.nextLine();
+        
+        list.updateItem(index, newItem);
+        list.displayItems();
 }
 }
