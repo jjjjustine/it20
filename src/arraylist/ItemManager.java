@@ -34,5 +34,25 @@ public class ItemManager {
             System.out.println("Index out of bounds");
         }
     }
+     //this find an item on the list
+    public int findItem(String finditem) {
+        int index = items.indexOf(finditem);
+
+        if (index != -1) {
+            System.out.println("Found: " + finditem + " at index " + index);
+        } else {
+            System.out.println(finditem + " not found.");
+        }
+        return index;
     }
+       //this will delete an item on the list
+    public void deleteItem(int index) {
+        if(index >= 0 && index < items.size()) {
+            String removedItem = items.remove(index);
+            System.out.println("You have successfully deleted the name: " + removedItem);
+        } else {
+            System.out.println("Index out of bounds");
+        }
+    }
+}
 

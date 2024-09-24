@@ -27,6 +27,7 @@ public class Main {
         list.addItems(item);
           System.out.println(".........................");
           
+          //mabutang diri gina update or change ang item
            System.out.println("Enter an index number that you want to change: ");
         index = sc.nextInt(); 
         
@@ -37,5 +38,22 @@ public class Main {
         
         list.updateItem(index, newItem);
         list.displayItems();
+        System.out.println(".........................");
+        
+        //mabutang diri ang gina pangita niya ang item
+        System.out.println("Enter a name that you want to find: ");
+        finditem = sc.nextLine();
+        
+        list.findItem(finditem);
+        list.displayItems();
+        System.out.println(".........................");
+
+        //diri para delete
+        System.out.println("Enter an index number to delete: ");
+        int newIndex = sc.nextInt();
+        
+        list.deleteItem(newIndex);
+        list.displayItems();
+        sc.close();
 }
 }
