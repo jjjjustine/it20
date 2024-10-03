@@ -23,7 +23,7 @@ public class LinkedList {
         }
     }
     
-     // Method to Add Song
+     // Method to Add name
     public void add(String data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -37,7 +37,7 @@ public class LinkedList {
         current.next = newNode;
     }
     
-     // Method to Print the List of Songs
+     // Method to Print the List of Names
     public void ShowList() {
         Node current = head;
         while (current != null) {
