@@ -55,4 +55,66 @@ public class LinkedList {
         }
             System.out.println("Value " + value + " not found in the list.");
     }
+     public void moveNodePointer(int index1, int index2) {
+      if (head == null || index1 == index2) return;
+
+    Node node1 = head, prev1 = null;
+    Node node2 = head, prev2 = null;
+
+    // Find node1 and its previous node
+    for (int i = 0; node1 != null && i < index1; i++) {
+        prev1 = node1;
+        node1 = node1.next;
+    }
+
+    // Find node2 and its previous node
+    for (int i = 0; node2 != null && i < index2; i++) {
+        prev2 = node2;
+        node2 = node2.next;
+    }
+
+    // If either node is null, return
+    if (node1 == null || node2 == null) return;
+
+   
+    if (prev1 == node2) {
+        // node1 is before node2
+        prev1.next = node2.next; 
+        node2.next = node1; 
+        if (index1 == 0) {
+            head = node2; 
+        } else {
+            prev2.next = node2; 
+        }
+        return;
+    } else if (prev2 == node1) {
+        prev2.next = node1.next; 
+        node1.next = node2;
+        if (index2 == 0) {
+            head = node1; 
+        } else {
+            prev1.next = node1; 
+        }
+        return;
+    }
+
+    if (prev1 != null) {
+        prev1.next = node2; 
+    } else {
+        // Update head if node1 is at the head
+        head = node2; 
+    }
+
+    if (prev2 != null) {
+        prev2.next = node1; 
+    } else {
+        // Update head if node2 is at the head
+        head = node1; 
+    }
+
+    // Swap next pointers
+    Node temp = node1.next;
+    node1.next = node2.next;
+    node2.next = temp;
+}
 }

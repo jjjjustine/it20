@@ -27,6 +27,7 @@ public class Main {
         System.out.println("Current Linked List:"); 
         list.printList();
         System.out.println(""); 
+        
      // delete
         boolean validInput = false;
          // Loops until a valid input is true.
@@ -51,7 +52,34 @@ public class Main {
           // Displays the updated linked list.
         System.out.println("Current Linked List:"); 
         list.printList(); 
-}
+
+     // Move/Swap 
+        boolean swapValid = false; 
+        while (!swapValid) { 
+            System.out.println();
+            System.out.println("Swapping node, start from 0");
+            System.out.print("Enter two index that you want to swap: "); 
+            // Reads first index to swap.
+            int num7 = sc.nextInt(); 
+            // Reads second index to swap.
+            int num8 = sc.nextInt(); 
+
+            // Checks if indices are valid.
+            if (isValidIndex(list, num7) && isValidIndex(list, num8)) { 
+                list.moveNodePointer(num7, num8); 
+                 // Displays the list after swap.
+                System.out.println("Current Linked List after swapping:"); 
+                list.printList(); 
+                //if valid ang index
+                swapValid = true; 
+            } 
+            // id dili valid ang index
+            else {
+                System.out.println("Invalid indices. Please enter again."); 
+            }
+        }
+    }
+            
      private static boolean existsInList(LinkedList list, int value) {
         Node current = list.head; 
         // Iterates through the list.
@@ -66,4 +94,21 @@ public class Main {
         // Returns false if not found.
         return false;
     }
+     private static boolean isValidIndex(LinkedList list, int index) {
+        int size = getSize(list); 
+        // Returns true if index is valid.
+        return index >= 0 && index < size;
+    }
+
+    private static int getSize(LinkedList list) { 
+        int size = 0; 
+        Node current = list.head; 
+        while (current != null) { 
+            size++; 
+            current = current.next; 
+        }
+        // Returns the total size of the list.
+        return size; 
+    }
 }
+
