@@ -409,7 +409,23 @@ public class StackCalcu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonpeekActionPerformed
 
     private void jButtonpopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonpopActionPerformed
-    
+      // Check if the stack is empty (by checking if jTextField3 is empty)
+    if (jTextField3.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Nothing to pop: Stack is empty.");
+        return;
+    }
+
+    // Get the current top value from jTextField3 to show in the message
+    double poppedValue = Double.parseDouble(jTextField3.getText()); 
+
+    // Show a message with the popped value
+    JOptionPane.showMessageDialog(this, "Popped element: " + poppedValue);
+
+    // Shift values downwards
+    jTextField3.setText(jTextField2.getText()); // Move value from jTextField2 to jTextField3 (new top)
+    jTextField2.setText(jTextField1.getText()); // Move value from jTextField1 to jTextField2
+    jTextField1.setText("");
+
     }//GEN-LAST:event_jButtonpopActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
