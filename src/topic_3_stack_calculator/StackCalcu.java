@@ -397,7 +397,15 @@ public class StackCalcu extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButtonpeekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonpeekActionPerformed
-    
+         // Check if jTextField3 is empty before trying to peek
+    if (jTextField3.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Stack is empty, nothing to peek.");
+    } else {
+        // Safely parse the top value from jTextField3
+        double topValue = Double.parseDouble(jTextField3.getText());
+        // Display the top value in a JOptionPane message
+        JOptionPane.showMessageDialog(this, "Top item of the stack: " + topValue);
+    }
     }//GEN-LAST:event_jButtonpeekActionPerformed
 
     private void jButtonpopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonpopActionPerformed
