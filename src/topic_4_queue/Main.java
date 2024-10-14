@@ -26,6 +26,31 @@ public class Main {
             System.out.print("Enter your choice: ");
             option = scanner.nextLine();
 
-        }   
+            switch (option) {
+                case "1":
+                    System.out.print("Enter customer name: ");
+                    String name = scanner.nextLine();
+                    customerQueue.enqueue(new Customer(name));
+                    break;
+
+                case "2":
+                    customerQueue.dequeue();
+                    break;
+
+                case "3":
+                    customerQueue.displayQueue();
+                    break;
+
+                case "4":
+                    System.out.println("Thankyou. Goodbye!");
+                    break;
+
+                default:
+                    System.out.println("Invalid option! Please try again.");
+                    break;
+            }
+        } while (!option.equals("4"));
+
+        scanner.close();
     }
 }
