@@ -51,5 +51,18 @@ public class BubbleSort {
         // Show the original array
         System.out.println("Original array:");
         printArray(arr);
+        
+        // Start the timer for sorting
+        long startTime = System.currentTimeMillis();
+        bubbleSort(arr); // Perform Bubble Sort
+        long endTime = System.currentTimeMillis();
+
+        // Show the sorted array
+        System.out.println("Sorted array:");
+        printArray(arr);
+
+        // Compute and display the runtime in seconds
+        long elapsedTimeInSeconds = (endTime - startTime) / 1000;
+        System.out.println("Bubble sort runtime: " + elapsedTimeInSeconds + " seconds");
     }
 }
