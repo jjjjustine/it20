@@ -24,4 +24,12 @@ public class BubbleSort {
             }
         }
     }
+
+    public static void printArray(int[] arr) {
+        // Print the elements of the array
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
 }
