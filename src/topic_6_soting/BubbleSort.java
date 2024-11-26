@@ -32,4 +32,24 @@ public class BubbleSort {
         }
         System.out.println();
     }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask the user for the number of elements in the array
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+
+        // Ask the user to input the elements of the array
+        int[] arr = new int[n];
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        System.out.println("----------------------");
+        // Show the original array
+        System.out.println("Original array:");
+        printArray(arr);
+    }
 }
